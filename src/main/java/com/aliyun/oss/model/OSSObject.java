@@ -25,19 +25,15 @@ import java.io.InputStream;
 
 /**
  * 表示OSS中的Object。
- * <p>
  * 在 OSS 中，用户的每个文件都是一个 Object，每个文件需小于 5G。
  * Object包含key、data和user meta。其中，key是Object 的名字；
  * data是Object 的数据；user meta是用户对该object的描述。
- * </p>
- * <p>
  * Object 命名规范
  * <ul>
  *  <li>使用UTF-8编码</li>
  *  <li>长度必须在 1-1023字节之间</li>
  *  <li>不能以斜线（/）或反斜线（\）开关</li>
  * </ul>
- * </p>
  *
  */
 public class OSSObject extends GenericResult implements Closeable {

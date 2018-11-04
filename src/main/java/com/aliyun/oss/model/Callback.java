@@ -81,7 +81,7 @@ public class Callback {
     }
 
     /**
-     * OSS发起回调时请求body的值，例如：key=$(key)&etag=$(etag)&my_var=$(x:my_var)。
+     * OSS发起回调时请求body的值，
      * 支持OSS系统变量、自定义变量和常量 。自定义变量的callbackVar传递。
      * 
      * @param callbackBody OSS回调请求的Body值

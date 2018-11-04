@@ -987,7 +987,6 @@ interface OSS {
      * 这个功能开启后，OSS将自动记录访问这个{@link Bucket}请求的详细信息，并按照用户指定的规则，
      * 以小时为单位，将访问日志作为一个Object写入用户指定的{@link Bucket}。
      * @param request {@link SetBucketLoggingRequest}对象。
-     * @return  BucketLoggingResult {@link UploadPartResult}。
      */
     void setBucketLogging(SetBucketLoggingRequest request)
             throws OSSException, ClientException;

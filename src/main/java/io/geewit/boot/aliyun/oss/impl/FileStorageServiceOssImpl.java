@@ -83,7 +83,6 @@ public class FileStorageServiceOssImpl implements FileStorageService {
      * delete file
      *
      * @param fileName file name
-     * @throws IOException IO Exception
      */
     @Override
     public void delete(String fileName) {

@@ -41,7 +41,7 @@ public class CreateLiveChannelResult {
 
     /**
      * 获取播放地址
-     * @return 播放地址
+     * @param playUrls 播放地址
      */
     public void setPlayUrls(List<String> playUrls) {
         this.playUrls = playUrls;

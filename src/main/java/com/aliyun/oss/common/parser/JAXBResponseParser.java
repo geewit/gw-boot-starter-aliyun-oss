@@ -36,7 +36,7 @@ import java.util.HashMap;
 import static com.aliyun.oss.internal.OSSUtils.COMMON_RESOURCE_MANAGER;
 
 /**
- * Implementation of <code>ResponseParser<code> with JAXB.
+ * Implementation of ResponseParser  with JAXB.
  */
 public class JAXBResponseParser implements ResponseParser<Object> {
     

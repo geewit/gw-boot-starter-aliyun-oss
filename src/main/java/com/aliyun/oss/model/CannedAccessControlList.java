@@ -29,7 +29,7 @@ package com.aliyun.oss.model;
 public enum CannedAccessControlList {
     
     /**
-     * 指定所有者具有继承控制权限 {@link Permission#Inheritance} ，
+     * 指定所有者具有继承控制权限 {@link Permission} ，
      * 仅供设置Object ACL时使用。
      */
     Default("default"),
