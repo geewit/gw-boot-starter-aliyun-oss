@@ -19,6 +19,11 @@ public class AliyunOssProperties {
      */
     private String endpoint;
 
+    /**
+     * connection timeout
+     */
+    private Integer timeout;
+
     public String getBucket() {
         return bucket;
     }
@@ -33,5 +38,13 @@ public class AliyunOssProperties {
 
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
+    }
+
+    public Integer getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(Integer timeout) {
+        this.timeout = timeout;
     }
 }

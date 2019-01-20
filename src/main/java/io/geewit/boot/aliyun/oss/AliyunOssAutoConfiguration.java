@@ -1,5 +1,6 @@
 package io.geewit.boot.aliyun.oss;
 
+import com.aliyun.oss.ClientConfiguration;
 import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.model.*;
 import io.geewit.boot.aliyun.AliyunProperties;
@@ -43,7 +44,16 @@ public class AliyunOssAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean
     public OSSClient ossClient() {
-        return new OSSClient(ossProperties.getEndpoint(), properties.getKey(), properties.getSecret());
+        ClientConfiguration config = new ClientConfiguration();
+        if(ossProperties.getTimeout() != null && ossProperties.getTimeout() > 0) {
+            config.setConnectionTimeout(ossProperties.getTimeout());
+            config.setSocketTimeout(ossProperties.getTimeout());
+            config.setRequestTimeout(ossProperties.getTimeout());
+            config.setConnectionRequestTimeout(ossProperties.getTimeout());
+        }
+
+
+        return new OSSClient(ossProperties.getEndpoint(), properties.getKey(), properties.getSecret(), config);
     }
 
     @Bean
