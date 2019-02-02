@@ -1,6 +1,5 @@
 apply from: "https://raw.githubusercontent.com/geewit/gradle_publish_sonatype/master/publish.gradle"
 
-
 dependencies {
     compile("org.jdom:jdom2:$jdom_version")
     compile("org.slf4j:slf4j-api:$slf4j_version") {
