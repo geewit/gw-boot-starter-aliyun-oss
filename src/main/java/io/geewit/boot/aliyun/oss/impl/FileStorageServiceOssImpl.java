@@ -5,7 +5,7 @@ import com.aliyun.oss.model.OSSObject;
 import com.aliyun.oss.model.ObjectMetadata;
 import io.geewit.boot.aliyun.oss.ByteArrayDataSource;
 import io.geewit.boot.aliyun.oss.FileStorageService;
-import io.geewit.core.utils.UUID;
+import io.geewit.utils.uuid.UUID;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.MediaType;
