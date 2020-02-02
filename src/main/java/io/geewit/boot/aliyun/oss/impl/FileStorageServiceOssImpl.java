@@ -55,8 +55,7 @@ public class FileStorageServiceOssImpl implements FileStorageService {
      */
     @Override
     public String save(DataSource ds) throws IOException {
-        String newName;
-        newName = getUuidName(ds.getName());
+        String newName = getUuidName(ds.getName());
         byte[] content = IOUtils.toByteArray(ds.getInputStream());
         upload(bucketName, newName, content);
         return newName;
@@ -72,8 +71,7 @@ public class FileStorageServiceOssImpl implements FileStorageService {
      */
     @Override
     public String saveToDirectory(String directory, DataSource ds) throws IOException {
-        String newName;
-        newName = directory + "/" + getUuidName(ds.getName());
+        String newName = directory + "/" + getUuidName(ds.getName());
         byte[] content = IOUtils.toByteArray(ds.getInputStream());
         upload(bucketName, newName, content);
         return newName;

@@ -28,7 +28,6 @@ import java.io.ByteArrayInputStream;
 public class AliyunOssAutoConfiguration {
     private final static Logger logger = LoggerFactory.getLogger(AliyunOssAutoConfiguration.class);
 
-
     private final Environment environment;
 
     private final AliyunProperties properties;
@@ -51,7 +50,6 @@ public class AliyunOssAutoConfiguration {
             config.setRequestTimeout(ossProperties.getTimeout());
             config.setConnectionRequestTimeout(ossProperties.getTimeout());
         }
-
 
         return new OSSClient(ossProperties.getEndpoint(), properties.getKey(), properties.getSecret(), config);
     }
